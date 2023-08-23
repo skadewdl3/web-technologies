@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration Form</title>
+</head>
+
+<body>
+  <div class="text-center w-full h-screen flex items-center justify-center flex-col">
+    <h1 class="text-5xl font-bold w-full">Student Entrance Exam</h1>
+    <h2 class="text-2xl">Registration Form</h2>
+    <p class="py-6 w-1/2">
+      This is a dummy registration form for an entrace exam like MHTCET, JEE, etc. Make sure you have all necessary
+      documents before continuing. Enter all information as acccurately as possible to the best of your knowledge.
+    </p>
+    <button onclick="document.querySelector('#registration-form').scrollIntoView()" class="btn btn-primary">
+      Continue
+    </button>
+  </div>
+
+  <form class="registration-form w-full h-screen flex flex-col items-center py-10" id="registration-form">
+
+    <fieldset class="registration-section justify-start w-2/3 mb-12">
+      <legend class="registration-section-name text-tertiary text-lg font-bold mb-2">Personal Details</legend>
+
+      <div class="input-container w-full mb-6">
+        <p class="name text-xl text-primary">Full Name (as per 10th SSC Marksheet) <span
+            class="font-bold text-orange-300">*</span></p>
+        <input type="text" placeholder="Full Name (as per 10th SSC Marksheet)"
+          class="input input-bordered focus:input-primary w-full mt-2" required />
+      </div>
+
+      <div class="input-container w-full mb-6">
+        <label for="fathers-name" class="name text-xl text-primary">Father's Name <label /><span
+            class="font-bold text-orange-300">*</span>
+          <span class="text-sm text-gray-500">(At least one of mother/father's name is required)</span>
+          <input type="text" name="fathers-name" placeholder="Father's Name"
+            class="input focus:input-primary input-bordered w-full mt-2" />
+      </div>
+
+      <div class="input-container w-full mb-6">
+        <label for="mothers-name" class="name text-xl text-primary">Mother's Name<label />
+          <input type="text" name="mothers-name" placeholder="Mother's Name"
+            class="input input-bordered focus:input-primary w-full mt-2" />
+      </div>
+
+      <div class="input-container w-full mb-6">
+        <p for="gender" class="name text-xl text-primary">Gender <span class="font-bold text-orange-300">*</span>
+          <p />
+        <div class="flex items-center mb-0.5">
+          <input type="radio" name="gender" class="radio checked:radio-primary" />
+          <label for="gender-male" class="name ml-4 text-xl">Male<label />
+        </div>
+        <div class="flex items-center mb-0.5">
+          <input type="radio" name="gender" class="radio checked:radio-primary" />
+          <label for="gender-female" class="name ml-4 text-xl">Female<label />
+        </div>
+        <div class="flex items-center mb-0.5">
+          <input type="radio" name="gender" class="radio checked:radio-primary" />
+          <label for="gender-other" class="name ml-4 text-xl">Other (please specify)<label />
+        </div>
+        <input type="text" name="gender-other-input" placeholder="Type here"
+          class="input input-bordered focus:input-primary w-1/2 my-2" />
+        <div class="flex items-center mb-0.5">
+          <input type="radio" name="gender" class="radio checked:radio-primary" />
+          <label for="gender-unspecified" class="name ml-4 text-xl">I'd rather not say<label />
+        </div>
+      </div>
+
+      <div class="input-container w-full mb-6">
+        <label for="mothers-name" class="name text-xl text-primary">Date of Birth <span
+            class="font-bold text-orange-300">*</span><label />
+          <input type="date" name="dob" class="input input-bordered focus:input-primary w-full mt-2 text-white"
+            required />
+      </div>
+
+      <div class="input-container w-full mb-6">
+        <label for="religion" class="name text-xl text-primary">Religion <span
+            class="font-bold text-orange-300">*</span><label />
+          <div class="dropdown block">
+            <p tabindex="0" class="btn m-1 religion-text">Select Religion</p>
+            <ul tabindex="0"
+              class="religion-list dropdown-content z-[1] menu p-2 shadow bg-base-100 border-primary rounded-box w-52">
+              <li class="religion-item" data-value="Hindu"><span data-value="Hindu" class="text-md">Hindu</span></li>
+              <li class="religion-item" data-value="Muslim"><span data-value="Muslim" class="text-md">Muslim</span></li>
+              <li class="religion-item" data-value="Sikh"><span data-value="Sikh" class="text-md">Sikh</span></li>
+              <li class="religion-item" data-value="Christian"><span data-value="Christian"
+                  class="text-md">Christian</span></li>
+              <li class="religion-item" data-value="Parsi"><span data-value="Parsi" class="text-md">Parsi</span></li>
+              <li class="religion-item" data-value="Other"><span data-value="Other" class="text-md">Other</span></li>
+
+            </ul>
+          </div>
+
+      </div>
+
+    </fieldset>
+
+    <fieldset class="registration-section justify-start w-2/3 mb-12">
+      <legend class="registration-section-name text-tertiary text-lg font-bold mb-2">Correspondence Details</legend>
+
+      <div class="input-container w-full mb-6">
+        <p class="name text-xl text-primary">Permanent Address <span class="font-bold text-orange-300">*</span></p>
+        <textarea name="permanent-address"
+          class="textarea textarea-bordered focus:textarea-primary w-full resize-y mt-2"
+          placeholder="Permanent Address"></textarea>
+      </div>
+
+      <div class="input-container w-full mb-6">
+        <label for="current-address" class="name text-xl text-primary">Current Address <span
+            class="font-bold text-orange-300">*</span></label>
+        <textarea name="current-address" class="textarea textarea-bordered focus:textarea-primary w-full resize-y mt-2"
+          placeholder="Current Address"></textarea>
+        <div class="flex items-center"><input type="checkbox" name="permanent-address-same-as-correspondence"
+            class="checkbox mr-2"> <label for="permanent-address-same-as-correspondence">Correspondence address is same
+            as permanent address</label></div>
+      </div>
+
+
+
+    </fieldset>
+
+    <fieldset class="registration-section justify-start w-2/3 mb-12">
+      <legend class="registration-section-name text-tertiary text-lg font-bold mb-2">Upload Required Documents</legend>
+
+      <div class="input-container w-full mb-6">
+        <p class="name text-xl text-primary">Passport Photograph <span
+            class="font-bold text-orange-300">*</span><br /><span class="text-sm text-gray-500">(JPG/PNG only. File size
+            less than 100kb)</span></p>
+        <input type="file" class="file-input w-full file-input-bordered mt-2" accept="image/jpg,image/png,image/jpeg"
+          required />
+
+      </div>
+
+      <div class="input-container w-full mb-6">
+        <p class="name text-xl text-primary">10th SSC/CBSE/Equivalent Marksheet <span
+            class="font-bold text-orange-300">*</span><br /><span class="text-sm text-gray-500">(PDF only. File size
+            less than 100kb)</span></p>
+        <input type="file" class="file-input w-full file-input-bordered mt-2" accept="application/pdf" required />
+
+      </div>
+
+      <div class="input-container w-full mb-6">
+        <p class="name text-xl text-primary">12th HSC/CBSE/Equivalent Marksheet <span
+            class="font-bold text-orange-300">*</span><br /><span class="text-sm text-gray-500">(PDF only. File size
+            less than
+            100kb)</span></p>
+        <input type="file" class="file-input w-full file-input-bordered mt-2" accept="application/pdf" required />
+
+      </div>
+
+
+    </fieldset>
+
+    <fieldset class="registration-section justify-start w-2/3 mb-12">
+      <legend class="registration-section-name text-tertiary text-lg font-bold mb-2">Accept Terms and Conditions
+      </legend>
+
+      <div class="input-container w-full mb-6">
+        <p class="name text-xl text-primary">Terms and Conditions <span class="font-bold text-orange-300">*</span><br />
+        </p>
+
+        <p class="mt-2 mb-4">The terms and conditons to this form are non-existent. Even so, I need to type something
+          coherent here so it doesn't look ike dummy text. By clicking the checkbox below, I acknowledge that all the
+          information I have provided is true and updated to the best of my knowledge. If any inconsistencies are found,
+          I am to be held responsible and will accept any punishment dealt by the grim reaper upon my death.</p>
+
+        <div class="flex items-center"><input type="checkbox" name="permanent-address-same-as-correspondence"
+            class="checkbox mr-2" required> <label for="permanent-address-same-as-correspondence">I agree to all terms
+            and conditions</label></div>
+
+        <button class="btn btn-primary mt-6 submit-button" action="submit">Submit</button>
+      </div>
+
+    </fieldset>
+
+  </form>
+
+  <div class="toast info-toast fixed translate-x-[200%] bottom-10 right-10">
+    <div class="alert alert-success">
+      <span>Registration done successfully</span>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
